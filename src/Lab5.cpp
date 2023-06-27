@@ -10,15 +10,17 @@ void loop();
 SYSTEM_MODE(MANUAL);
 SYSTEM_THREAD(ENABLED);
 
-int value; 
+int value;
 
-void setup() {
+void setup()
+{
   pinMode(D5, OUTPUT);
   pinMode(A5, INPUT);
 }
 
-void loop() {
-  int value =  analogRead(A5);
+void loop()
+{
+  int value = analogRead(A5);
   digitalWrite(value);
-  value = map(value, 0, 4095, 0, 255);
+  //value = map(value, 0, 4095, 0, 255);
 }
